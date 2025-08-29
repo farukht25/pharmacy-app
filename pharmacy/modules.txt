@@ -1,1 +1,3 @@
 pharmacy
+Agency_Management
+Manufacturer_Item_Mapping

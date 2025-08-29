@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2025-08-29 15:17:58.153549",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "agency_name",
+  "territory",
+  "primary_contact",
+  "is_active",
+  "agency_items"
+ ],
+ "fields": [
+  {
+   "fieldname": "agency_name",
+   "fieldtype": "Data",
+   "label": "agency_name"
+  },
+  {
+   "fieldname": "territory",
+   "fieldtype": "Link",
+   "label": "territory",
+   "options": "Territory"
+  },
+  {
+   "fieldname": "primary_contact",
+   "fieldtype": "Link",
+   "label": "primary_contact",
+   "options": "Contract"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_active",
+   "fieldtype": "Check",
+   "label": "is_active"
+  },
+  {
+   "fieldname": "agency_items",
+   "fieldtype": "Table",
+   "label": "Agency Items",
+   "options": "Agency Item"
+  }
+ ],
+ "grid_page_length": 50,
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2025-08-29 15:31:59.445701",
+ "modified_by": "Administrator",
+ "module": "Agency_Management",
+ "name": "Agency",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "row_format": "Dynamic",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
