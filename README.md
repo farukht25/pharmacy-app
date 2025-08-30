@@ -1,4 +1,4 @@
-<img width="953" height="527" alt="image" src="https://github.com/user-attachments/assets/2dc2f2ea-5733-4159-8211-47673bc1dac9" /># 💊 Pharmacy Management App (Frappe 15)
+# 💊 Pharmacy Management App (Frappe 15)
 
 A custom Frappe 15 app for managing pharmacy operations, including manufacturer–item mappings, validated DocTypes, and resilient reporting. Built with modular architecture and designed for easy deployment and API integration.
 
@@ -61,7 +61,7 @@ Log in using the admin credentials you set during bench new-site.
 
 Testing
 
-Agency Management 
+Module 1: Agency Management 
 
 Search for  Agency List
 <img width="953" height="527" alt="image" src="https://github.com/user-attachments/assets/88d16c35-11a6-411c-bbca-6058d1729549" />
@@ -78,6 +78,9 @@ go to the search bar and type supplier type to view new supplier
 
 to view report, search for report list and click on Agency Lead Times and click on show result
 <img width="952" height="461" alt="image" src="https://github.com/user-attachments/assets/6a51a944-dca5-4161-ac3b-066bb2b414e4" />
+
+Module 2: Manufacturer–Item Mapping
+
 
 
 
