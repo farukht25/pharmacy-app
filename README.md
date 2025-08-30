@@ -81,6 +81,11 @@ to view report, search for report list and click on Agency Lead Times and click 
 
 Module 2: Manufacturer–Item Mapping
 
+search for Pharmacy Manufacturer List in the search bar
+create two items, one with is blocked check and another one with is blocked unchecked
+<img width="959" height="295" alt="image" src="https://github.com/user-attachments/assets/90013447-8fae-4d53-a1c6-379c7c94e4f3" />
+
+
 
 
 
