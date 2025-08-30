@@ -4,8 +4,11 @@ from frappe.model.document import Document
 class ManufacturerItem(Document):
     def validate(self):
         # Block if manufacturer is marked as blocked
-        if frappe.db.get_value("Pharmacy Manufacturer", self.manufacturer, "is_blocked"):
+        # if frappe.db.get_value("Pharmacy Manufacturer", self.manufacturer, "is_blocked"):
+        #     frappe.throw(f"Cannot add items for blocked manufacturer: {self.manufacturer}")
+        if int(frappe.db.get_value("Pharmacy Manufacturer", self.manufacturer, "is_blocked") or 0):
             frappe.throw(f"Cannot add items for blocked manufacturer: {self.manufacturer}")
+
 
         # Ensure uniqueness of (manufacturer, item_code)
         if frappe.db.exists("Manufacturer Item", {

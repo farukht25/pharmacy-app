@@ -9,6 +9,7 @@
   "gln",
   "is_blocked"
  ],
+ "title_field": "manufacturer_name",
  "fields": [
   {
    "fieldname": "manufacturer_name",

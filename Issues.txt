@@ -1,0 +1,179 @@
+✅ Issue 1: Validating DocType Field Types for Agency and Agency Item
+Prompt: “Are these data types correct for Agency and Agency Item DocTypes in Frappe?”
+
+AI Suggested:
+
+agency_name: Data ✅
+
+territory: Link to Territory ✅
+
+primary_contact: Link to Contact (not Contract)
+
+is_active: Check with default 0 ✅
+
+agency_items: Table with child DocType Agency Item ✅
+
+Agency Item:
+
+item_code: Link to Item
+
+min_order_qty: Float or Int
+
+lead_time_days: Int
+
+What I Implemented:
+
+Corrected primary_contact to Link to Contact
+
+Defined Agency Item with recommended field types
+
+Set in_list_view: 1 for key child table fields
+
+🧪 Issue 2: Structuring Child Table for Agency Item
+Prompt: “What fieldtypes should I use for item_code, min_order_qty, and lead_time_days in a child table?”
+
+AI Suggested:
+
+item_code: Link to Item
+
+min_order_qty: Float (if fractional values allowed)
+
+lead_time_days: Int
+
+What I Implemented:
+
+Created Agency Item child DocType with:
+
+item_code: Link to Item
+
+min_order_qty: Float
+
+lead_time_days: Int
+
+🛠️ Issue 3: Validation Logic for Inactive Agencies
+Prompt: “How can I prevent inactive agencies from placing orders in Frappe?”
+
+AI Suggested:
+
+Add validation in Agency.py using frappe.throw() if is_active == 0
+
+Optionally filter inactive agencies in queries or reports
+
+What I Implemented:
+
+Drafted validation stub in Agency.py
+
+Planning to add filters in custom reports
+
+🔒 Issue 4: Enforcing Uniqueness in Manufacturer Item
+Prompt: “How do I enforce unique fields in ERPNext v15 DocType?”
+
+AI Suggested:
+
+Use frappe.db.exists() in validate()
+
+Alternatively, use Unique field property (not suitable for composite keys)
+
+What I Implemented:
+
+Added frappe.db.exists() check in validate()
+
+🚫 Issue 5: Preventing Deactivation of Agency with Linked Items
+Prompt: “How to stop deactivation of DocType if child table has rows?”
+
+AI Suggested:
+
+Add validation in Agency.validate() to check agency_items
+
+Raise frappe.throw() if is_active is unchecked and items exist
+
+What I Implemented:
+
+Implemented frappe.throw() in validate() if agency_items exist and is_active == 0
+
+🧩 Issue 6: Auto-Fill part_number if Blank
+Prompt: “How to set default value for field in Frappe if left blank?”
+
+AI Suggested:
+
+Use validate() to assign item_code to part_number if empty
+
+What I Implemented:
+
+Added conditional assignment in validate()
+
+🧵 Issue 7: Creating Supplier from Agency
+Prompt: “How to add custom button to Frappe form that calls Python method?”
+
+AI Suggested:
+
+Use frm.add_custom_button() in Agency.js
+
+Use frappe.call() to invoke backend method
+
+Backend: use frappe.get_doc() to create Supplier
+
+What I Implemented:
+
+Added button in refresh()
+
+Defined backend method to create Supplier from Agency
+
+🌐 Issue 8: REST API for Manufacturer Mappings
+Prompt: “How to expose REST API in Frappe to return filtered records?”
+
+AI Suggested:
+
+Use @frappe.whitelist
+
+Use frappe.get_all() with filters
+
+What I Implemented:
+
+Created whitelisted method returning mappings for item_code
+
+⚙️ Issue 9: ERPNext bench set-config Syntax Error
+Prompt: “Why is my bench set-config developer_mode 1 --site my-site command failing?”
+
+AI Suggested:
+
+Use global --site flag before subcommand: bench --site my-site set-config developer_mode 1
+
+What I Implemented:
+
+Corrected command to: bench --site nexterp.test set-config developer_mode 1
+
+Successfully enabled developer mode
+
+🛡️ Issue 10: Preventing Deactivation with Linked Items (Expanded)
+Prompt: “How do I validate a DocType before saving if child table has records?”
+
+AI Suggested:
+
+Use frappe.db.exists() or frappe.db.get_value() in validate()
+
+Raise frappe.ValidationError if condition met
+
+What I Implemented: (Fill this in after coding)
+
+🧮 Issue 11: Enforcing Unique (manufacturer, item_code) Pair
+Prompt: “How to enforce unique combination of two fields in ERPNext v15?”
+
+AI Suggested:
+
+Use frappe.db.exists() in validate()
+
+Avoid relying on single-field uniqueness
+
+What I Implemented: (Fill this in after coding)
+
+🧱 Issue 12: "Create Supplier" Button via Script
+Prompt: “How to add a custom button to a DocType form in ERPNext using client script?”
+
+AI Suggested:
+
+Use frappe.ui.form.on() to add button
+
+Use frappe.call() to invoke backend
+
+Backend: use frappe.get_doc() to create Supplier
