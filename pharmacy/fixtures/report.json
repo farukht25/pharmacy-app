@@ -11,6 +11,38 @@
   "javascript": null,
   "json": null,
   "letter_head": null,
+  "modified": "2025-08-29 17:07:51.494022",
+  "module": "Agency_Management",
+  "name": "Agency Lead Times",
+  "prepared_report": 0,
+  "query": "SELECT\r\n    ai.parent AS agency,\r\n    ai.item_code,\r\n    ai.min_order_qty,\r\n    ai.lead_time_days\r\nFROM `tabAgency Item` ai\r\nORDER BY ai.parent, ai.item_code\r\n",
+  "ref_doctype": "Agency",
+  "reference_report": null,
+  "report_name": "Agency Lead Times",
+  "report_script": "",
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Agency Lead Times",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
+ },
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
   "modified": "2025-08-29 19:27:02.798102",
   "module": "Manufacturer_Item_Mapping",
   "name": "Items by Manufacturer",

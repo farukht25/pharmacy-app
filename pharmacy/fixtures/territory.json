@@ -1,0 +1,26 @@
+[
+ {
+  "docstatus": 0,
+  "doctype": "Territory",
+  "is_group": 0,
+  "modified": "2025-08-30 20:43:24.821884",
+  "name": "UAE",
+  "old_parent": "All Territories",
+  "parent_territory": "All Territories",
+  "targets": [],
+  "territory_manager": null,
+  "territory_name": "UAE"
+ },
+ {
+  "docstatus": 0,
+  "doctype": "Territory",
+  "is_group": 0,
+  "modified": "2025-08-30 20:43:24.870194",
+  "name": "Dubai",
+  "old_parent": "All Territories",
+  "parent_territory": "All Territories",
+  "targets": [],
+  "territory_manager": null,
+  "territory_name": "Dubai"
+ }
+]
