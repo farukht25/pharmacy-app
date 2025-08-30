@@ -85,6 +85,24 @@ search for Pharmacy Manufacturer List in the search bar
 create two items, one with is blocked check and another one with is blocked unchecked
 <img width="959" height="295" alt="image" src="https://github.com/user-attachments/assets/90013447-8fae-4d53-a1c6-379c7c94e4f3" />
 
+The app won't allow you to create  Manufacturer List with an is blocked pharmacy manufacturer 
+
+when we create a new list without filling item code, it will autofill it with item_code
+<img width="800" height="381" alt="image" src="https://github.com/user-attachments/assets/0dee5bd7-765b-48af-885b-5bd6013401b2" />
+<img width="872" height="431" alt="image" src="https://github.com/user-attachments/assets/585e4971-0c77-4ef6-ba8d-63cd6c471beb" />
+
+try to create two items with the same part number and item code, the app wont allow it
+
+
+for REST endpoint hit 
+http://localhost:8000/api/method/pharmacy.manufacturer_item_mapping.doctype.manufacturer_item.manufacturer_item.get_mappings_by_item?item_code=hh
+<img width="886" height="175" alt="image" src="https://github.com/user-attachments/assets/1f7fde4b-d257-4065-b4d0-e405cc13a9aa" />
+
+for report go to report list and search for Items by Manufacturer, click show report
+<img width="958" height="263" alt="image" src="https://github.com/user-attachments/assets/dbc19a4c-bfe9-4597-bb33-38abaab438b2" />
+
+
+
 
 
 
