@@ -1,33 +1,21 @@
-### pharmacy
+# 📦 Pharmacy Management App (Frappe 15)
 
-pharmacy assignemnt
+A custom Frappe 15 app for managing pharmacy operations, including inventory, manufacturer mappings, and reporting. Built with modular DocTypes, REST APIs, and fixtures for easy deployment.
 
-### Installation
+## 🚀 Features
 
-You can install this app using the [bench](https://github.com/frappe/bench) CLI:
+- Manufacturer–Item mapping via REST API
+- Validated DocTypes for robust data entry
+- Custom reports with Script Report fallback
+- Exported fixtures for portability
+- Token-based authentication for secure API access
 
-```bash
-cd $PATH_TO_YOUR_BENCH
-bench get-app $URL_OF_THIS_REPO --branch develop
-bench install-app pharmacy
-```
-
-### Contributing
-
-This app uses `pre-commit` for code formatting and linting. Please [install pre-commit](https://pre-commit.com/#installation) and enable it for this repository:
+## 🛠️ Installation
 
 ```bash
-cd apps/pharmacy
-pre-commit install
-```
-
-Pre-commit is configured to use the following tools for checking and formatting your code:
-
-- ruff
-- eslint
-- prettier
-- pyupgrade
-
-### License
-
-mit
+# Get Frappe bench ready
+bench init my-bench --frappe-branch version-15
+cd my-bench
+bench new-site nexterp.test
+bench get-app pharmacy_app https://github.com/farukht25/pharmacy_app.git
+bench --site nexterp.test install-app pharmacy_app
