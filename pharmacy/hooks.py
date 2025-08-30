@@ -5,6 +5,45 @@ app_description = "pharmacy assignemnt"
 app_email = "farukhahamed10@gmail.com"
 app_license = "mit"
 
+fixtures = [
+    # Include all custom fields you've added to core or custom DocTypes
+    {"doctype": "Custom Field"},
+
+    # Include any property overrides (e.g. hidden fields, label changes)
+    {"doctype": "Property Setter"},
+
+    # Include your custom report
+    {"doctype": "Report", "filters": [["name", "in", ["Items by Manufacturer"]]]},
+
+    # Include your core DocTypes
+    {"doctype": "DocType", "filters": [["name", "in", [
+        "Manufacturer Item",
+        "Pharmacy Manufacturer"
+    ]]]},
+
+    # Include roles if you created any custom ones
+    {"doctype": "Role", "filters": [["name", "in", ["Pharmacy Manager"]]]},
+
+    # Include permissions if you customized access
+    {"doctype": "Custom DocPerm", "filters": [["parent", "in", [
+        "Manufacturer Item",
+        "Pharmacy Manufacturer"
+    ]]]},
+
+    # Include any workflows (if applicable)
+    {"doctype": "Workflow", "filters": [["document_type", "in", [
+        "Manufacturer Item",
+        "Pharmacy Manufacturer"
+    ]]]},
+
+    # Include any client-side scripts (if you added dropdown logic or filters)
+    {"doctype": "Client Script", "filters": [["dt", "in", [
+        "Manufacturer Item",
+        "Pharmacy Manufacturer"
+    ]]]}
+]
+
+
 # Apps
 # ------------------
 

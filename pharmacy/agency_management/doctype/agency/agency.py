@@ -10,6 +10,13 @@ class Agency(Document):
         if not self.is_active:
             return ("Inactive", "red", "is_active,=,0")
         return ("Active", "green", "is_active,=,1")
+    
+    
+    
+    @staticmethod
+    def get_list_fields():
+        # This method ensures 'is_active' is always fetched for the list view
+        return ["name", "is_active", "creation", "modified"]
 
 @frappe.whitelist()
 def create_supplier(agency_name):

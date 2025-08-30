@@ -13,9 +13,9 @@
   {
    "fieldname": "manufacturer_name",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "manufacturer_name",
-   "autoname": "field:manufacturer_name"
-
+   "reqd": 1
   },
   {
    "fieldname": "gln",
@@ -32,7 +32,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-29 18:05:29.013550",
+ "modified": "2025-08-29 22:36:51.430439",
  "modified_by": "Administrator",
  "module": "Manufacturer_Item_Mapping",
  "name": "Pharmacy Manufacturer",

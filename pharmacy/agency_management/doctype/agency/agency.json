@@ -11,6 +11,7 @@
   "is_active",
   "agency_items"
  ],
+ "title_field": "agency_name",
  "fields": [
   {
    "fieldname": "agency_name",
@@ -33,6 +34,7 @@
    "default": "0",
    "fieldname": "is_active",
    "fieldtype": "Check",
+   "in_list_view": 1,
    "label": "is_active"
   },
   {
@@ -45,7 +47,7 @@
  "grid_page_length": 50,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2025-08-29 15:31:59.445701",
+ "modified": "2025-08-29 22:33:24.494801",
  "modified_by": "Administrator",
  "module": "Agency_Management",
  "name": "Agency",

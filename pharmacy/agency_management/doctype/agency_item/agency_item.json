@@ -10,6 +10,7 @@
   "min_order_qty",
   "lead_time_days"
  ],
+ "title_field": "item_code",
  "fields": [
   {
    "fieldname": "item_code",

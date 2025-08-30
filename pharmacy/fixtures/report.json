@@ -1,0 +1,34 @@
+[
+ {
+  "add_total_row": 0,
+  "add_translate_data": 0,
+  "columns": [],
+  "disabled": 0,
+  "docstatus": 0,
+  "doctype": "Report",
+  "filters": [],
+  "is_standard": "No",
+  "javascript": null,
+  "json": null,
+  "letter_head": null,
+  "modified": "2025-08-29 19:27:02.798102",
+  "module": "Manufacturer_Item_Mapping",
+  "name": "Items by Manufacturer",
+  "prepared_report": 0,
+  "query": "SELECT\r\n    mi.manufacturer,\r\n    mi.item_code,\r\n    mi.part_number,\r\n    mi.gtin\r\nFROM `tabManufacturer Item` mi\r\nJOIN `tabPharmacy Manufacturer` pm ON pm.name = mi.manufacturer\r\nWHERE pm.is_blocked = 0\r\n\r\nORDER BY mi.manufacturer, mi.item_code\r\n",
+  "ref_doctype": "Manufacturer Item",
+  "reference_report": null,
+  "report_name": "Items by Manufacturer",
+  "report_script": "",
+  "report_type": "Query Report",
+  "roles": [
+   {
+    "parent": "Items by Manufacturer",
+    "parentfield": "roles",
+    "parenttype": "Report",
+    "role": "System Manager"
+   }
+  ],
+  "timeout": 0
+ }
+]
